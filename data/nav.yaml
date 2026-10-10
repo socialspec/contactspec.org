@@ -1,0 +1,58 @@
+main:
+  - label: APIs
+    href: https://socialspec.org/
+  - label: News
+    href: https://socialspec.org/news
+  - label: GitHub
+    href: https://github.com/socialspec/contactspec.org
+    icon: github
+    cta: true
+
+mobile:
+  - label: APIs
+    href: https://socialspec.org/
+  - label: News
+    href: https://socialspec.org/news
+  - label: About
+    href: https://socialspec.org/about
+  - label: GitHub
+    href: https://github.com/socialspec/contactspec.org
+    icon: github
+    cta: true
+
+footer:
+  title:
+    href: https://socialspec.org
+  description: |
+    ContactSpec is one of the SocialSpec APIs for social engagement on the world wide web.
+    Built on open standards.
+  groups:
+    - label: APIs
+      markers: false
+      links:
+        - label: socialspec.org
+          href: https://socialspec.org
+          color: none
+        - label: followspec.org
+          href: https://followspec.org
+          color: none
+        - label: aboutspec.org
+          href: https://aboutspec.org
+          color: none
+    - label: Resources
+      markers: false
+      links:
+        - label: Home
+          href: https://socialspec.org/
+          color: none
+        - label: News
+          href: https://socialspec.org/news
+          color: none
+        - label: Contact
+          href: https://socialspec.org/.well-known/contact.vcf
+        - label: info@socialspec.org
+          href: mailto:info@socialspec.org
+          color: none
+  meta:
+    message: ContactSpec.org &copy; 2026
+    path: /.well-known/contact.vcf

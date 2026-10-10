@@ -1,0 +1,13 @@
+---
+oss:
+  title: Open source, open process.
+  description: |
+    Help shape the future of the @contactspec.org API. 
+  links:
+    - label: Join the RFC
+      href: https://github.com/socialspec/contactspec.org/issues/1
+      primary: true
+  github:
+    href: https://github.com/socialspec/contactspec.org
+    repo: socialspec/contactspec.org
+    stars: 1

@@ -1,0 +1,131 @@
+---
+created_at: 2026-10-07T12:00:00-07:00
+layout: landing
+title: ContactSpec
+description: |
+    Contact pages are already ubiquitous. It's time to make them portable. 
+    Convert "the best way to contact _____" into actual connections.
+hero:
+  eyebrow:
+    label: Request for comments
+    href: https://github.com/socialspec/contactspec.org/issues/1
+  title: |
+    You've got
+  phrases:
+    - mail
+    - a new message
+    - a new friend
+    - a new subscriber
+    - a new customer
+  description: |
+    Contact pages are already ubiquitous.
+    It's time to make them portable.
+    Convert &quot;the best way to contact _____&quot; into actual connections.
+  http:
+    request:
+      method: GET
+      url: /.well-known/contact.vcf
+    response:
+      version: HTTP/1.1
+      status: 200 OK
+      headers:
+        - name: Content-Type
+          value: text/vcard; charset=utf-8
+      body: |
+        BEGIN:VCARD
+        VERSION:4.0
+        FN:Jordan Doe
+        EMAIL;PREF=1:hello@jordandoe.com
+        URL:https://jordandoe.com
+        END:VCARD
+
+profile:
+  active_spec: contact
+  name: Jordan Doe
+  handle: "@jordandoe.com"
+  summary: Eager explorer, eternal optimist, passionate about taking the long way home.
+  avatar: "💁🏻‍♀️"
+  default_tab: contact
+  tabs:
+    - id: posts
+      label: Posts
+    - id: contact
+      label: Contact
+  posts:
+    - date: Sep 30, 2026
+      title: Yes, you can email me
+      blurb: Why my contact page now has a machine-readable twin.
+  about:
+    heading: Jordan Doe
+    body: Eager explorer, eternal optimist, passionate about taking the long way home.
+    links: []
+  dm: hello@jordandoe.com
+  contact:
+    - kind: Name
+      value: Jordan Doe
+    - kind: Email · preferred
+      value: hello@jordandoe.com
+      href: mailto:hello@jordandoe.com
+      action: Email
+    - kind: Website
+      value: jordandoe.com
+      href: https://jordandoe.com
+      action: Open link
+
+publishers:
+  heading: For publishers
+  lede: From personal websites to CMS platforms
+  description: |
+    Use the ContactSpec API to give public contact information escape velocity:
+
+    - Create a `contact.vcf` file (vCard 3.0 or newer)
+    - Publish it at `/.well-known/contact.vcf`
+    - Allow [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) requests
+
+    That's it. That's all publishers need to implement.
+  cta:
+    label: Join the RFC →
+    href: https://github.com/socialspec/contactspec.org
+
+subscribers:
+  heading: For subscribers
+  lede: From RSS feed readers to next-gen social experiences
+  description: |
+    Use the ContactSpec API to help followers connect and engage with the feeds they follow.
+
+    - Discovery is a single `HTTP GET` request
+    - Parse responses using standard vCard libraries
+    - Show DM & reply buttons
+
+    That's it. That's all subscribers need to implement.
+  cta:
+    label: Join the RFC →
+    href: https://github.com/socialspec/contactspec.org
+  http:
+    request:
+      label: Request
+      badge: Discovery
+      method: GET
+      url: https://jordandoe.com/.well-known/contact.vcf
+      headers:
+        - name: Host
+          value: jordandoe.com
+        - name: Accept
+          value: text/vcard
+        - name: If-None-Match
+          value: '"5eb63bbbe01eeed093cb22bb8f5acdc3"'
+    response:
+      label: Response
+      badge: Verification
+      version: HTTP/1.1
+      status: 200 OK
+      checks:
+        - label: TLS certificate for
+          value: "jordandoe.com: valid"
+        - label: "Content-Type:"
+          value: text/vcard; charset=utf-8
+
+sitemap:
+  paths:
+    - /index.html
+    - /.well-known/contact.vcf
