@@ -4,7 +4,7 @@ layout: landing
 title: ContactSpec
 description: |
     Contact pages are already ubiquitous. It's time to make them portable. 
-    Convert "the best way to contact _____" into actual connections.
+    Convert "the best way to contact _____ is _____" into actual connections.
 hero:
   eyebrow:
     label: Request for comments
@@ -20,7 +20,7 @@ hero:
   description: |
     Contact pages are already ubiquitous.
     It's time to make them portable.
-    Convert &quot;the best way to contact _____&quot; into actual connections.
+    Convert &quot;the best way to contact _____ is _____&quot; into actual connections.
   http:
     request:
       method: GET
