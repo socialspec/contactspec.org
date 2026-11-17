@@ -1,6 +1,6 @@
-# ContacSpec.org
+# ContactSpec.org
 
-[ContacSpec.org] is one of the [SocialSpec.org] APIs for social engagement on the world wide web.
+[ContactSpec.org] is one of the [SocialSpec.org] APIs for social engagement on the world wide web.
 
 ## The Specification
 
